@@ -1,0 +1,12 @@
+.SubtitleScreen {
+    width: 100%;
+    height: 100vh;
+    .SubtitleList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &__Item {
+            background: black;
+        }
+    }
+}

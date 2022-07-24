@@ -1,14 +1,15 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties } from "react";
+import Styles from './index.module.scss';
 
 export interface PropsType {
     text: string;
     style?: CSSProperties;
 }
 
-const Subtitle = (props: PropsType): ReactNode => {
+const Subtitle = (props: PropsType) => {
   return (
     <div
-      className="Subtitle"
+      className={Styles.Subtitle}
       style={{
         ...props.style,
       }}
