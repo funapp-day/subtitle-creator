@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import Subtitle from "src/components/atoms/Subtitle";
+import SubtitleViewer from "src/components/organisms/SubtitleViewer";
 import { Subtitle as SubtitleType } from "src/types/interfaces";
 import Styles from './index.module.scss';
 
@@ -10,23 +9,10 @@ export interface PropsType {
 const SubtitleScreen = (props: PropsType) => {
   return (
     <div className={Styles.SubtitleScreen}>
-      <ul className={Styles.SubtitleList}>
-        { [...props.items].map((item, key) => renderSubtitle(item.text, key)) }
-      </ul>
+    <SubtitleViewer
+        items={props.items}
+      ></SubtitleViewer>
     </div>
-  );
-};
-
-const renderSubtitle = (text: string, key: number): ReactNode => {
-  return (
-    <li
-      className={Styles.SubtitleList__Item}
-      key={key}
-    >
-      <Subtitle
-        text={text}
-      />
-    </li>
   );
 };
 
